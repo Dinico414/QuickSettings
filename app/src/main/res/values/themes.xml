@@ -1,9 +1,18 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.QuickSettings" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+
+    <style name="Base.Theme.Xenon" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
+        <item name="fontFamily">@font/product_sans_regular_new</item>
+
     </style>
 
-    <style name="Theme.QuickSettings" parent="Base.Theme.QuickSettings" />
+    <style name="Theme.Xenon" parent="Base.Theme.Xenon">
+        <item name="android:navigationBarColor">@color/surfaceContainerLowest</item>
+        <item name="android:statusBarColor">@color/surfaceContainerLowest</item>
+        <item name="android:windowBackground">@color/surfaceContainerLowest</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:enforceStatusBarContrast">true</item>
+        <item name="colorBackgroundFloating">@color/surfaceContainer</item>
+
+    </style>
+
 </resources>
