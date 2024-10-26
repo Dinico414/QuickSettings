@@ -122,12 +122,119 @@
                 android:text="dd.mm.yy ee"
                 android:textColor="@color/onSurface"
                 android:textSize="20sp"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <LinearLayout
+                android:id="@+id/bottomRowButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                    <Button
+                        android:id="@+id/editButton"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/openSettingsButton"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/editIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/transparent"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/baseline_mode_edit_24"
+                        app:layout_constraintBottom_toBottomOf="@id/editButton"
+                        app:layout_constraintEnd_toEndOf="@id/editButton"
+                        app:layout_constraintStart_toStartOf="@id/editButton"
+                        app:layout_constraintTop_toTopOf="@id/editButton"
+                        app:tint="@color/onSurface" />
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/openSettingsButton"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/powerButton"
+                        app:layout_constraintStart_toEndOf="@+id/editButton"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/openSettingsIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/transparent"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/settings"
+                        app:layout_constraintBottom_toBottomOf="@id/openSettingsButton"
+                        app:layout_constraintEnd_toEndOf="@id/openSettingsButton"
+                        app:layout_constraintStart_toStartOf="@id/openSettingsButton"
+                        app:layout_constraintTop_toTopOf="@id/openSettingsButton"
+                        app:tint="@color/onSurface" />
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/powerButton"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/openSettingsButton"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/powerIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/transparent"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/baseline_power_settings_new_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/powerButton"
+                        app:layout_constraintEnd_toEndOf="@+id/powerButton"
+                        app:layout_constraintStart_toStartOf="@+id/powerButton"
+                        app:layout_constraintTop_toTopOf="@+id/powerButton"
+                        app:tint="@color/onSurface" />
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            </LinearLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
