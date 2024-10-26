@@ -1,34 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="150dp"
     android:background="@drawable/tile_popup"
     android:backgroundTint="@color/surfaceContainer"
     android:clipToOutline="true"
     android:gravity="center"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/brightnessSeekBarContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Brightness"
-        android:textAppearance="?attr/textAppearanceHeadlineSmall" />
+        android:layout_height="wrap_content">
 
-    <SeekBar
-        android:id="@+id/brightnessSeekBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Volume"
-        android:textAppearance="?attr/textAppearanceHeadlineSmall" />
+        <com.google.android.material.slider.Slider
+            android:id="@+id/brightnessSeekBar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:labelBehavior="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:thumbColor="@color/transparent"
+            app:thumbHeight="10dp"
+            app:thumbRadius="10dp"
+            app:thumbTrackGapSize="0dp"
+            app:thumbWidth="10dp"
+            app:trackColorActive="@color/transparent"
+            app:trackColorInactive="@color/volume_color"
+            app:trackHeight="10dp"
+            app:trackInsideCornerSize="10dp"
+            app:trackStopIndicatorSize="0dp" />
 
-    <SeekBar
-        android:id="@+id/volumeSeekBar"
+        <com.google.android.material.slider.Slider
+            android:id="@+id/brightnessSeekBar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            app:labelBehavior="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:thumbColor="@color/primary"
+            app:thumbHeight="40dp"
+            app:thumbRadius="20dp"
+            app:thumbTrackGapSize="0dp"
+            app:thumbWidth="40dp"
+            app:trackColorActive="@color/primary"
+            app:trackColorInactive="@color/transparent"
+            app:trackHeight="40dp"
+            app:trackInsideCornerSize="20dp"
+            app:trackStopIndicatorSize="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/volumeSeekBarContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/volumeSeekBar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:labelBehavior="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:thumbColor="@color/transparent"
+            app:thumbHeight="10dp"
+            app:thumbRadius="10dp"
+            app:thumbTrackGapSize="0dp"
+            app:thumbWidth="10dp"
+            app:trackColorActive="@color/transparent"
+            app:trackColorInactive="@color/volume_color"
+            app:trackHeight="10dp"
+            app:trackInsideCornerSize="10dp"
+            app:trackStopIndicatorSize="0dp" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/volumeSeekBar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:soundEffectsEnabled="true"
+            app:labelBehavior="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:thumbColor="@color/primary"
+            app:thumbHeight="40dp"
+            app:thumbRadius="20dp"
+            app:thumbTrackGapSize="0dp"
+            app:thumbWidth="40dp"
+            app:trackColorActive="@color/primary"
+            app:trackColorInactive="@color/transparent"
+            app:trackHeight="40dp"
+            app:trackInsideCornerSize="20dp"
+            app:trackStopIndicatorSize="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/ringModeButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="@color/quicksettings_card_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/vibrateModeButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ringModeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            android:importantForAccessibility="no"
+            android:src="@drawable/baseline_notifications_24"
+            app:layout_constraintBottom_toBottomOf="@id/ringModeButton"
+            app:layout_constraintEnd_toEndOf="@id/ringModeButton"
+            app:layout_constraintStart_toStartOf="@id/ringModeButton"
+            app:layout_constraintTop_toTopOf="@id/ringModeButton"
+            app:tint="@color/quicksettings_card_text" />
+
+        <Button
+            android:id="@+id/vibrateModeButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/quicksettings_card_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/muteModeButton"
+            app:layout_constraintStart_toEndOf="@id/ringModeButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/vibrateModeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            android:importantForAccessibility="no"
+            android:src="@drawable/baseline_notifications_active_24"
+            app:layout_constraintBottom_toBottomOf="@id/vibrateModeButton"
+            app:layout_constraintEnd_toEndOf="@id/vibrateModeButton"
+            app:layout_constraintStart_toStartOf="@id/vibrateModeButton"
+            app:layout_constraintTop_toTopOf="@id/vibrateModeButton"
+            app:tint="@color/quicksettings_card_text" />
+
+        <Button
+            android:id="@+id/muteModeButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/quicksettings_card_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/soundSettingsButton"
+            app:layout_constraintStart_toEndOf="@id/vibrateModeButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/muteModeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            android:importantForAccessibility="no"
+            android:src="@drawable/baseline_notifications_off_24"
+            app:layout_constraintBottom_toBottomOf="@id/muteModeButton"
+            app:layout_constraintEnd_toEndOf="@id/muteModeButton"
+            app:layout_constraintStart_toStartOf="@id/muteModeButton"
+            app:layout_constraintTop_toTopOf="@id/muteModeButton"
+            app:tint="@color/quicksettings_card_text" />
+
+        <Button
+            android:id="@+id/soundSettingsButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/quicksettings_card_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/muteModeButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/soundSettingsIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            android:importantForAccessibility="no"
+            android:src="@drawable/baseline_notifications_active_24"
+            app:layout_constraintBottom_toBottomOf="@id/soundSettingsButton"
+            app:layout_constraintEnd_toEndOf="@id/soundSettingsButton"
+            app:layout_constraintStart_toStartOf="@id/soundSettingsButton"
+            app:layout_constraintTop_toTopOf="@id/soundSettingsButton"
+            app:tint="@color/quicksettings_card_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>
