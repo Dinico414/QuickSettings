@@ -4,7 +4,7 @@
     android:id="@+id/quickSettingsContainer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/tile_popup"
+    android:background="@drawable/tiles"
     android:backgroundTint="@color/surfaceContainer"
     android:clipToOutline="true"
     android:gravity="center"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="150dp"
-    android:background="@drawable/tile_popup"
+    android:background="@drawable/tiles"
     android:backgroundTint="@color/surfaceContainer"
     android:clipToOutline="true"
     android:gravity="center"
